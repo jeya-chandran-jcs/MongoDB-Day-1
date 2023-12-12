@@ -175,11 +175,9 @@ db.products.insertMany([
         "product_color": "indigo"
     }
 ])
-db.products.find().pretty()
+db.products.find().pretty() //all products
 
-db.products.find({"product_price": { $gte: 400, $lte: 800 }}).pretty() //all product
-
-db.products.find({"product_price": {$not: { $gte: 400, $lte: 800 }}}).pretty() //products between 400to800
+db.products.find({"product_price": { $gte: 400, $lte: 800 }}).pretty() //products  between 400to800
 
 db.products.find({"product_price": {$not: { $gte: 400, $lte: 800 }}}).pretty() //products not between 400to800
 
